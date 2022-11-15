@@ -4,6 +4,14 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.empty? %>
+    <div class="alert alert-warning">
+      <h4>Your cart is empty</h4>
+      <hr>
+      You should <a href="/" class="alert-link">add some plants!</a>
+    </div>
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +56,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
